@@ -1,0 +1,72 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ *  contributor license agreements.  See the NOTICE file distributed with
+ *  this work for additional information regarding copyright ownership.
+ *  The ASF licenses this file to You under the Apache License, Version 2.0
+ *  (the "License"); you may not use this file except in compliance with
+ *  the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+package ${package}.presentation;
+
+import ${package}.application.BookDao;
+import ${package}.entities.Book;
+
+import java.io.Serializable;
+import javax.faces.view.ViewScoped;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import java.util.List;
+
+@Named
+@ViewScoped
+public class BookBean implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	@Inject
+	private BookDao bookDao;
+
+	private List<Book> booksAvailable;
+	private String bookTitle;
+
+	public String onload() {
+		booksAvailable = bookDao.getAllBooks();
+		return null;
+	}
+	
+	public String getBookTitle() {
+		return bookTitle;
+	}
+
+	public void setBookTitle(String bookTitle) {
+		this.bookTitle = bookTitle;
+	}
+
+	public List<Book> getBooksAvailable() {
+		return booksAvailable;
+	}
+
+	public void setBooksAvailable(List<Book> booksAvailable) {
+		this.booksAvailable = booksAvailable;
+	}
+
+	public String fetchBooks() {
+		booksAvailable = bookDao.getAllBooks();
+		return "success";
+	}
+
+	public String add() {
+		Book book = bookDao.initialiseBook(bookTitle);
+		booksAvailable.add(book);
+		return "success";
+	}
+}
