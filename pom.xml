@@ -20,4 +20,8 @@
 	<artifactId>bootsfaces-webapp-archetype</artifactId>
 	<name>Maven Plugins :: BootsFaces Webapp Archetype</name>
 
+	<scm>
+		<connection>scm:git:https://github.com/chongma/bootsfaces-webapp-archetype.git</connection>
+	</scm>
+
 </project>
