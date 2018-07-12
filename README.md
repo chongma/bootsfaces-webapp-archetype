@@ -40,6 +40,5 @@ To stop the TomEE instance
 
 If you are using the archetype to create a reproducer for the BootsFaces team the files you might need to edit are  
 `src/main/java/beans/BookBean.java`  
-`src/main/webapp/index.xhtml`  
 `src/main/webapp/book.xhtml`  
 `src/main/webapp/result.xhtml`  
