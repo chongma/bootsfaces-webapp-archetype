@@ -1,7 +1,7 @@
 # bootsfaces-webapp-archetype
 Webapp archetype for BootsFaces
 
-This archetype should be available at Maven central at  
+This archetype should be available at [Maven central](https://mvnrepository.com/artifact/net.bootsfaces) at  
 `<groupId>net.bootsfaces</groupId>`  
 `<artifactId>bootsfaces-webapp-archetype</artifactId>`  
 `<version>1.2.0</version>`  
