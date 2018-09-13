@@ -16,7 +16,7 @@
  */
 package ${package}.presentation;
 
-import ${package}.application.BookDao;
+import ${package}.dao.BookDao;
 import ${package}.entities.Book;
 
 import java.io.Serializable;
