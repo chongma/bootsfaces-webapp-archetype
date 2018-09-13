@@ -14,7 +14,7 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-package ${package}.presentation;
+package ${package}.beans;
 
 import ${package}.dao.BookDao;
 import ${package}.entities.Book;
