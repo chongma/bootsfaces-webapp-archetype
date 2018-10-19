@@ -28,14 +28,15 @@ public class BookDao {
 
 	public List<Book> getAllBooks() {
 		List<Book> books = new ArrayList<>();
-		books.add(initialiseBook("Moby Dick"));
-		books.add(initialiseBook("I, Robot"));
-		books.add(initialiseBook("The grapes of wrath"));
+		books.add(initialiseBook(1, "Moby Dick"));
+		books.add(initialiseBook(2, "I, Robot"));
+		books.add(initialiseBook(3, "The grapes of wrath"));
 		return books;
 	}
 
-	public Book initialiseBook(String bookTitle) {
+	public Book initialiseBook(int bookId, String bookTitle) {
 		Book book = new Book();
+		book.setBookId(bookId);
 		book.setBookTitle(bookTitle);
 		return book;
 	}
